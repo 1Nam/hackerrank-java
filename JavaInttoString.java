@@ -23,16 +23,16 @@ public class Solution {
     }
 }
 
-        //The following class will prevent you from terminating the code using exit(0)!
-    class DoNotTerminate {
+//The following class will prevent you from terminating the code using exit(0)!
+class DoNotTerminate {
 
-        public static class ExitTrappedException extends SecurityException {
+    public static class ExitTrappedException extends SecurityException {
 
-            private static final long serialVersionUID = 1;
-        }
+        private static final long serialVersionUID = 1;
+    }
 
-        public static void forbidExit() {
-            final SecurityManager securityManager = new SecurityManager() {
+    public static void forbidExit() {
+        final SecurityManager securityManager = new SecurityManager() {
             @Override
             public void checkPermission(Permission permission) {
                 if (permission.getName().contains("exitVM")) {
@@ -40,6 +40,6 @@ public class Solution {
                 }
             }
         };
-    System.setSecurityManager(securityManager);
+        System.setSecurityManager(securityManager);
     }
 }
