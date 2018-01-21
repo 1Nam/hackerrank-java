@@ -1,2 +1,2 @@
 # hackerrank-java
-The solution of all challenges of Java HackerRank
+The solution of all Java HackerRank challenges
